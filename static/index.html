@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satwika Dance Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">Satwika Dance Academy</h2>
+        </a>
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#offer" class="nav-link">What We Offer</a>
+          </li>
+          <li class="nav-item">
+            <a href="#book" class="nav-link">Book Your First Class Today</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Welcome to Satwika Dance Academy</h2>
+                    <h3 class="subtitle">Where Passion Meets Performance</h3>
+                    <p class="description">Discover the joy of Kuchipudi dance!</p>
+
+                    <div class="buttons">
+                        <a href="#offer" class="btn btn-primary">Explore Our Classes</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="https://via.placeholder.com/680x420?text=Kuchipudi+Dance" alt="hero-image" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+          <div class="section-content">
+            <div class="about-img">
+              <img src="https://via.placeholder.com/600x600?text=About+Satwika" alt="about-image" class="about-image">
+            </div>
+            <div class="about-details">
+              <h2 class = "section-title">About Us</h2>
+              <p class = "section-description">Learn more about Satwika Dance Academy and our mission to promote Kuchipudi dance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="offer" class="services-section">
+          <h2 class="section-title">What We Offer</h2>
+          <div class="section-content">
+            <ul class="services-list">
+              <li class = "service-item">
+                <h3 class="service-title">1-on-1 Classes</h3>
+                <p class="service-description">45-minute focused classes for a single student.</p>
+              </li>
+              <li class = "service-item">
+                <h3 class="service-title">Group Classes</h3>
+                <p class="service-description">1-hour classes for a group of students based on experience level.</p>
+              </li>
+              <li class = "service-item">
+                <h3 class="service-title">Costume Tailoring Services</h3>
+                <p class="service-description">Custom costume tailoring and stitching for dancers.</p>
+              </li>
+              <li class = "service-item">
+                <h3 class="service-title">Jewelry and Makeup</h3>
+                <p class="service-description">We rent dance jewelry for performances and competitions, sell makeup supplies (while they last), and offer makeup services for dancers.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="book" class="schedule-section">
+          <h2 class="section-title">Book Your First Class Today</h2>
+          <div class="section-content">
+            <div class="booking-grid">
+              <form id="booking-form" class="booking-form">
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" required />
+                </label>
+                <label>
+                  Preferred Time
+                  <input type="text" name="classTime" placeholder="e.g. Mon 16:00" required />
+                </label>
+                <label>
+                  Class Length
+                  <select name="classType">
+                    <option value="45m">45 minutes</option>
+                    <option value="1h" selected>1 hour</option>
+                  </select>
+                </label>
+                <label>
+                  Instructor (optional)
+                  <input type="text" name="instructor" placeholder="Leave blank for default" />
+                </label>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+                <div id="booking-message" class="booking-message"></div>
+              </form>
+
+              <div class="schedule-panel">
+                <h3 class="section-title">Upcoming Classes</h3>
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Class Time</th>
+                      <th>Class Length</th>
+                      <th>Instructor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="schedule-body">
+                    <!-- populated by JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="section-content">
+            <p>
+              For questions about classes, pricing, or availability, please email us at
+              <a href="mailto:info@satwikaacademy.com">info@satwikaacademy.com</a> or use the form below.
+            </p>
+            <form id="contact-form" class="contact-form">
+              <label>
+                Your Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Your Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" placeholder="Write a message..." required></textarea>
+              </label>
+              <button type="submit" class="btn btn-secondary">Send Message</button>
+              <div id="contact-message" class="contact-message"></div>
+            </form>
+          </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
